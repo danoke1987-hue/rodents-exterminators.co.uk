@@ -1,5 +1,6 @@
 import { BUSINESS_CONFIG } from "@/data/business.ts";
 import { AlertTriangle, Search, Activity, Lock, Phone, ArrowRight } from "lucide-react";
+import discreetBaitImg from "../../assets/images/discreet_bait_station_1784142889421.jpg";
 
 export default function RatControl() {
   const signs = [
@@ -93,48 +94,63 @@ export default function RatControl() {
           </div>
 
           {/* Right Column: CTA & Info Panel */}
-          <div className="lg:col-span-5 bg-slate-900 text-slate-100 p-8 rounded-3xl border border-slate-800 shadow-xl space-y-6">
-            <h3 className="text-display font-extrabold text-xl text-white">
-              What to Expect During Your Treatment
-            </h3>
-            
-            <ul className="space-y-4 text-xs text-slate-300 leading-relaxed">
-              <li className="flex items-start gap-3">
-                <span className="w-1.5 h-1.5 rounded-full bg-rose-500 mt-1.5 shrink-0"></span>
-                <span><strong>No Unsafe Pesticide Exposure:</strong> We prioritize safe, targeted structural trapping. We do not encourage amateur rodenticide use, which poses severe toxicity risks to domestic pets and non-target garden wildlife.</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="w-1.5 h-1.5 rounded-full bg-rose-500 mt-1.5 shrink-0"></span>
-                <span><strong>Structured Follow-Ups:</strong> Effective rat control requires a minimum of 2-3 visits to inspect trap rates, safely clear captures, and finalize exclusion work.</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="w-1.5 h-1.5 rounded-full bg-rose-500 mt-1.5 shrink-0"></span>
-                <span><strong>Aesthetic Integrity:</strong> All internal bait and trapping stations are discreetly tucked away behind furniture and cupboards, completely out of sight.</span>
-              </li>
-            </ul>
+          <div className="lg:col-span-5 space-y-6">
+            {/* Bait Box Image Card */}
+            <div className="relative overflow-hidden rounded-3xl border border-slate-200/80 shadow-md aspect-[4/3] bg-slate-100 group">
+              <img 
+                src={discreetBaitImg} 
+                alt="Discreet, professional, and pet-safe tamper-resistant rat bait box station placed neatly by a wall"
+                className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500"
+                referrerPolicy="no-referrer"
+              />
+              <div className="absolute top-3 left-3 bg-slate-900/80 backdrop-blur-xs text-rose-400 px-3 py-1 rounded-full text-[10px] font-bold font-mono uppercase tracking-wider">
+                Safe & Discreet Stations
+              </div>
+            </div>
 
-            <div className="border-t border-slate-800 pt-6 space-y-4">
-              <p className="text-xs text-slate-400 leading-relaxed">
-                Suspect rats are already nesting inside your walls or floorboards? Speak directly to our specialist London response dispatcher.
-              </p>
+            <div className="bg-slate-900 text-slate-100 p-8 rounded-3xl border border-slate-800 shadow-xl space-y-6">
+              <h3 className="text-display font-extrabold text-xl text-white">
+                What to Expect During Your Treatment
+              </h3>
               
-              <div className="flex flex-col sm:flex-row gap-3">
-                <a
-                  id="rat-section-phone-cta"
-                  href="tel:08002118166"
-                  className="flex-1 flex items-center justify-center gap-2 bg-rose-600 hover:bg-rose-700 text-white font-extrabold py-3.5 px-4 rounded-xl text-sm transition-colors shadow-md"
-                >
-                  <Phone className="w-4 h-4" />
-                  <span>Call {BUSINESS_CONFIG.phoneDisplay}</span>
-                </a>
-                <a
-                  id="rat-section-quote-cta"
-                  href="#contact"
-                  className="flex-1 flex items-center justify-center gap-1.5 bg-slate-800 hover:bg-slate-750 text-white font-bold py-3.5 px-4 rounded-xl text-sm border border-slate-750 transition-colors"
-                >
-                  <span>Request Quote</span>
-                  <ArrowRight className="w-4 h-4" />
-                </a>
+              <ul className="space-y-4 text-xs text-slate-300 leading-relaxed">
+                <li className="flex items-start gap-3">
+                  <span className="w-1.5 h-1.5 rounded-full bg-rose-500 mt-1.5 shrink-0"></span>
+                  <span><strong>No Unsafe Pesticide Exposure:</strong> We prioritize safe, targeted structural trapping. We do not encourage amateur rodenticide use, which poses severe toxicity risks to domestic pets and non-target garden wildlife.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="w-1.5 h-1.5 rounded-full bg-rose-500 mt-1.5 shrink-0"></span>
+                  <span><strong>Structured Follow-Ups:</strong> Effective rat control requires a minimum of 2-3 visits to inspect trap rates, safely clear captures, and finalize exclusion work.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="w-1.5 h-1.5 rounded-full bg-rose-500 mt-1.5 shrink-0"></span>
+                  <span><strong>Aesthetic Integrity:</strong> All internal bait and trapping stations are discreetly tucked away behind furniture and cupboards, completely out of sight.</span>
+                </li>
+              </ul>
+
+              <div className="border-t border-slate-800 pt-6 space-y-4">
+                <p className="text-xs text-slate-400 leading-relaxed">
+                  Suspect rats are already nesting inside your walls or floorboards? Speak directly to our specialist London response dispatcher.
+                </p>
+                
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <a
+                    id="rat-section-phone-cta"
+                    href="tel:08002118166"
+                    className="flex-1 flex items-center justify-center gap-2 bg-rose-600 hover:bg-rose-700 text-white font-extrabold py-3.5 px-4 rounded-xl text-sm transition-colors shadow-md"
+                  >
+                    <Phone className="w-4 h-4" />
+                    <span>Call {BUSINESS_CONFIG.phoneDisplay}</span>
+                  </a>
+                  <a
+                    id="rat-section-quote-cta"
+                    href="#contact"
+                    className="flex-1 flex items-center justify-center gap-1.5 bg-slate-800 hover:bg-slate-750 text-white font-bold py-3.5 px-4 rounded-xl text-sm border border-slate-750 transition-colors"
+                  >
+                    <span>Request Quote</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </a>
+                </div>
               </div>
             </div>
           </div>

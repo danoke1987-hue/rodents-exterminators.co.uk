@@ -1,5 +1,6 @@
 import { BUSINESS_CONFIG } from "@/data/business.ts";
 import { ShieldCheck, Crosshair, HelpCircle, HardHat, Info, Phone, Mail } from "lucide-react";
+import proofingMeshImg from "../../assets/images/rodent_proofing_mesh_1784142874950.jpg";
 
 export default function ProofingTrapping() {
   return (
@@ -75,30 +76,45 @@ export default function ProofingTrapping() {
 
         {/* SECTION B: RODENT PROOFING */}
         <div id="proofing" className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center scroll-mt-20">
-          <div className="lg:col-span-5 bg-slate-50 border border-slate-200 p-8 rounded-3xl space-y-6 order-2 lg:order-1">
-            <div className="flex gap-2.5">
-              <Info className="w-5 h-5 text-rose-600 shrink-0 mt-0.5" />
-              <div>
-                <h4 className="font-extrabold text-slate-900 text-sm">Treatment vs Proofing</h4>
-                <p className="text-slate-600 text-xs mt-1 leading-relaxed">
-                  It is vital to distinguish between treatment and proofing. <strong>Treatment</strong> targets and removes the current active rodent population nesting in your building. <strong>Proofing</strong> seals physical structural holes to reduce the risk of a new colony entering.
-                </p>
+          <div className="lg:col-span-5 space-y-6 order-2 lg:order-1">
+            {/* Sealing Image Card */}
+            <div className="relative overflow-hidden rounded-3xl border border-slate-200 shadow-md aspect-[4/3] bg-slate-100 group">
+              <img 
+                src={proofingMeshImg} 
+                alt="Stainless steel rodent proofing mesh and copper wool neatly sealing the structural gap around a utility pipe"
+                className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500"
+                referrerPolicy="no-referrer"
+              />
+              <div className="absolute top-3 left-3 bg-slate-900/80 backdrop-blur-xs text-emerald-400 px-3 py-1 rounded-full text-[10px] font-bold font-mono uppercase tracking-wider">
+                Permanent Exclusion Sealing
               </div>
             </div>
 
-            <p className="text-xs text-slate-500 leading-relaxed">
-              *Note: While our proofing uses the highest-grade anti-gnaw metal components, no building can be made permanently and unconditionally rodent-proof if future structural settling occurs, or if external doors and garage panels are left open.
-            </p>
+            <div className="bg-slate-50 border border-slate-200 p-8 rounded-3xl space-y-6">
+              <div className="flex gap-2.5">
+                <Info className="w-5 h-5 text-rose-600 shrink-0 mt-0.5" />
+                <div>
+                  <h4 className="font-extrabold text-slate-900 text-sm">Treatment vs Proofing</h4>
+                  <p className="text-slate-600 text-xs mt-1 leading-relaxed">
+                    It is vital to distinguish between treatment and proofing. <strong>Treatment</strong> targets and removes the current active rodent population nesting in your building. <strong>Proofing</strong> seals physical structural holes to reduce the risk of a new colony entering.
+                  </p>
+                </div>
+              </div>
 
-            <div className="border-t border-slate-200 pt-6">
-              <a
-                id="proofing-cta-btn"
-                href="#contact"
-                className="w-full flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 text-white font-bold py-3.5 rounded-xl text-sm transition-colors"
-              >
-                <Mail className="w-4 h-4" />
-                <span>Request a Proofing Quote</span>
-              </a>
+              <p className="text-xs text-slate-500 leading-relaxed">
+                *Note: While our proofing uses the highest-grade anti-gnaw metal components, no building can be made permanently and unconditionally rodent-proof if future structural settling occurs, or if external doors and garage panels are left open.
+              </p>
+
+              <div className="border-t border-slate-200 pt-6">
+                <a
+                  id="proofing-cta-btn"
+                  href="#contact"
+                  className="w-full flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 text-white font-bold py-3.5 rounded-xl text-sm transition-colors"
+                >
+                  <Mail className="w-4 h-4" />
+                  <span>Request a Proofing Quote</span>
+                </a>
+              </div>
             </div>
           </div>
 

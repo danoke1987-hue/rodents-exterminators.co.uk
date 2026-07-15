@@ -1,5 +1,6 @@
 import { BUSINESS_CONFIG } from "@/data/business.ts";
 import { Info, Sparkles, HelpCircle, HardHat, Phone, ArrowRight } from "lucide-react";
+import pestControlImg from "../../assets/images/pest_control_inspection_1784142860615.jpg";
 
 export default function MouseControl() {
   const signs = [
@@ -30,53 +31,68 @@ export default function MouseControl() {
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           {/* Left Column: CTA & Info Panel */}
-          <div className="lg:col-span-5 bg-white border border-slate-200 p-8 rounded-3xl shadow-xl space-y-6 order-2 lg:order-1">
-            <h3 className="text-display font-extrabold text-xl text-slate-900 flex items-center gap-2">
-              <HardHat className="w-5 h-5 text-rose-500" />
-              <span>Targeted Kitchen & Cavity Grid</span>
-            </h3>
-            
-            <p className="text-xs text-slate-600 leading-relaxed">
-              Mice typically establish nesting sites close to food sources, commonly inside kickboards, behind dishwashers, boiler cupboards, and wall plaster cavities.
-            </p>
+          <div className="lg:col-span-5 space-y-6 order-2 lg:order-1">
+            {/* Inspection Image Card */}
+            <div className="relative overflow-hidden rounded-3xl border border-slate-200/80 shadow-md aspect-[4/3] bg-slate-100 group">
+              <img 
+                src={pestControlImg} 
+                alt="Professional technician inspecting kitchen cavities and plumbing penetrations with a high-powered flashlight"
+                className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500"
+                referrerPolicy="no-referrer"
+              />
+              <div className="absolute top-3 left-3 bg-slate-900/80 backdrop-blur-xs text-rose-400 px-3 py-1 rounded-full text-[10px] font-bold font-mono uppercase tracking-wider">
+                Meticulous Inspection
+              </div>
+            </div>
 
-            <ul className="space-y-4 text-xs text-slate-600 leading-relaxed">
-              <li className="flex items-start gap-2.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-rose-600 mt-1.5 shrink-0"></span>
-                <span><strong>Micro-Trapping Enclosures:</strong> We deploy sensitive precision-sprung mechanical traps in lockable bait boxes, specifically set up to handle the lightweight body mass of house mice.</span>
-              </li>
-              <li className="flex items-start gap-2.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-rose-600 mt-1.5 shrink-0"></span>
-                <span><strong>No Broad Toxic Broadcasts:</strong> All control measures are contained inside protective enclosures. We ensure children and pets are completely safe.</span>
-              </li>
-              <li className="flex items-start gap-2.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-rose-600 mt-1.5 shrink-0"></span>
-                <span><strong>Detailed Void Sealing:</strong> We physically block off internal pipe collars and service penetrations under sinks and boilers, which are the main mouse superhighways.</span>
-              </li>
-            </ul>
-
-            <div className="border-t border-slate-150 pt-6 space-y-4">
-              <p className="text-xs text-slate-500 leading-relaxed">
-                Found mouse droppings behind your kitchen kickboards? Contact our responsive, discreet London team.
-              </p>
+            <div className="bg-white border border-slate-200 p-8 rounded-3xl shadow-xl space-y-6">
+              <h3 className="text-display font-extrabold text-xl text-slate-900 flex items-center gap-2">
+                <HardHat className="w-5 h-5 text-rose-500" />
+                <span>Targeted Kitchen & Cavity Grid</span>
+              </h3>
               
-              <div className="flex flex-col sm:flex-row gap-3">
-                <a
-                  id="mouse-section-phone-cta"
-                  href={BUSINESS_CONFIG.phoneLink}
-                  className="flex-1 flex items-center justify-center gap-2 bg-rose-600 hover:bg-rose-700 text-white font-extrabold py-3.5 px-4 rounded-xl text-sm transition-colors shadow-md"
-                >
-                  <Phone className="w-4 h-4" />
-                  <span>Call {BUSINESS_CONFIG.phoneDisplay}</span>
-                </a>
-                <a
-                  id="mouse-section-quote-cta"
-                  href="#contact"
-                  className="flex-1 flex items-center justify-center gap-1.5 bg-slate-900 hover:bg-slate-800 text-white font-bold py-3.5 px-4 rounded-xl text-sm transition-colors"
-                >
-                  <span>Get Quote</span>
-                  <ArrowRight className="w-4 h-4" />
-                </a>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                Mice typically establish nesting sites close to food sources, commonly inside kickboards, behind dishwashers, boiler cupboards, and wall plaster cavities.
+              </p>
+
+              <ul className="space-y-4 text-xs text-slate-600 leading-relaxed">
+                <li className="flex items-start gap-2.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-rose-600 mt-1.5 shrink-0"></span>
+                  <span><strong>Micro-Trapping Enclosures:</strong> We deploy sensitive precision-sprung mechanical traps in lockable bait boxes, specifically set up to handle the lightweight body mass of house mice.</span>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-rose-600 mt-1.5 shrink-0"></span>
+                  <span><strong>No Broad Toxic Broadcasts:</strong> All control measures are contained inside protective enclosures. We ensure children and pets are completely safe.</span>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-rose-600 mt-1.5 shrink-0"></span>
+                  <span><strong>Detailed Void Sealing:</strong> We physically block off internal pipe collars and service penetrations under sinks and boilers, which are the main mouse superhighways.</span>
+                </li>
+              </ul>
+
+              <div className="border-t border-slate-150 pt-6 space-y-4">
+                <p className="text-xs text-slate-500 leading-relaxed">
+                  Found mouse droppings behind your kitchen kickboards? Contact our responsive, discreet London team.
+                </p>
+                
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <a
+                    id="mouse-section-phone-cta"
+                    href={BUSINESS_CONFIG.phoneLink}
+                    className="flex-1 flex items-center justify-center gap-2 bg-rose-600 hover:bg-rose-700 text-white font-extrabold py-3.5 px-4 rounded-xl text-sm transition-colors shadow-md"
+                  >
+                    <Phone className="w-4 h-4" />
+                    <span>Call {BUSINESS_CONFIG.phoneDisplay}</span>
+                  </a>
+                  <a
+                    id="mouse-section-quote-cta"
+                    href="#contact"
+                    className="flex-1 flex items-center justify-center gap-1.5 bg-slate-900 hover:bg-slate-800 text-white font-bold py-3.5 px-4 rounded-xl text-sm transition-colors"
+                  >
+                    <span>Get Quote</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
