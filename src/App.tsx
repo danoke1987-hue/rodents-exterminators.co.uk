@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Analytics } from "@vercel/analytics/react";
 import { BUSINESS_CONFIG } from "@/data/business.ts";
 import { londonAreas } from "@/data/areas.ts";
 
@@ -85,6 +86,7 @@ export default function App() {
     <div className="min-h-screen bg-slate-50 text-slate-900 flex flex-col font-sans selection:bg-rose-500 selection:text-white antialiased">
       {/* 1. Schema and structured data injections */}
       <StructuredData />
+      <Analytics />
 
       {/* Skip-to-content accessibility link */}
       <a 
