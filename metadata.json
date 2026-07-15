@@ -1,0 +1,8 @@
+{
+  "name": "Rodents Exterminators",
+  "description": "Professional rat and mouse control, trapping and proofing services across Greater London and locations inside the M25.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
