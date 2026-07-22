@@ -241,7 +241,10 @@ export default function App() {
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {londonAreas.map((area) => (
-                    <div key={area.slug} className="bg-slate-900/60 p-4 border border-slate-800/80 rounded-xl space-y-2">
+                    <div 
+                      key={area.slug} 
+                      className="bg-slate-900/60 p-4 border border-slate-800/80 rounded-xl space-y-2 transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-[1.02] hover:bg-slate-900/90 hover:border-slate-700 hover:shadow-lg hover:shadow-rose-500/5"
+                    >
                       <h4 className="font-extrabold text-white text-sm flex items-center gap-1.5">
                         <MapPin className="w-3.5 h-3.5 text-rose-500" />
                         <span>{area.borough}</span>
